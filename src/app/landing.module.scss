@@ -1,0 +1,52 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+      
+      h1 {
+        font-size: 2rem;
+        color: #333;
+      }
+      
+      .navLink {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: #555;
+        transition: color 0.3s;
+        
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      
+      .cta {
+        padding: 1rem 2rem;
+        background: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+        
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
