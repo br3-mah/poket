@@ -1,5 +1,6 @@
 package main
-
+//# Author: Bremah Nyeleti
+//# Title : Pocket Ecommerce
 import (
 	"fmt"
 	"log"
@@ -8,8 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"pocket-ecommerce/config"
 	"pocket-ecommerce/routes"
-	
-	"pocket-ecommerce/middleware" // Add this import
+	// "pocket-ecommerce/middleware" 
 )
 
 func main() {
@@ -25,8 +25,7 @@ func main() {
 	defer sqlDB.Close()
 
 	r := gin.Default()
-	r.Use(middleware.Logger())
-	// REMOVED CORS FROM HERE - Let routes.go handle it
+	// r.Use(middleware.Logger())
 	routes.SetupRoutes(r)
 
 	port := os.Getenv("PORT")

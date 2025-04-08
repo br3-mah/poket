@@ -3,7 +3,7 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-contrib/cors"
-	"pocket-ecommerce/controllers"
+	"pocket-ecommerce/controllers/auth"
 	"time"
 )
 

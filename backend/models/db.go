@@ -1,9 +1,9 @@
 package models
 
 import (
+	"fmt"
 	"log"
 	"os"
-	"fmt"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -26,7 +26,7 @@ func ConnectDB() {
 	fmt.Println("Database connected successfully")
 
 	// Run the migrations (create tables, indexes, etc.)
-	err = DB.AutoMigrate(&User{})  // Automatically migrate the User model
+	err = DB.AutoMigrate(&User{}) // Automatically migrate the User model
 	if err != nil {
 		log.Fatal("failed to migrate the database:", err)
 	}

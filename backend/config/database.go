@@ -5,6 +5,8 @@ import (
 	"log"
 	"os"
 
+	
+	"pocket-ecommerce/models"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -38,5 +40,14 @@ func ConnectDB() *gorm.DB {
 		log.Fatal("❌ Failed to connect to database:", err)
 	}
 	fmt.Println("✅ Database connected successfully!")
+
+	
+
+	// Run the migrations (create tables, indexes, etc.)
+	err = DB.AutoMigrate(&models.User{})  // Automatically migrate the User model
+	if err != nil {
+		log.Fatal("failed to migrate the database:", err)
+	}
+	fmt.Println("Database migrated successfully")
 	return DB
 }
